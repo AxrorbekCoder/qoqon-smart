@@ -1,0 +1,61 @@
+/* src/LogoAnimation.css */
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0a376e;
+    z-index: 100;
+    overflow: hidden;
+    background-image: url(./uzor.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+  }
+  
+  .logo-circle {
+    display: flex;
+    flex-direction: column; /* Разместить элементы по вертикали */
+    justify-content: center;
+    align-items: center;
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    border: 4px solid #f0ad11;
+    position: relative; /* Для позиционирования текста */
+  }
+  
+  /* Логотип с анимацией бесконечного вращения по оси Y */
+  .logo-image {
+    width: 150px;
+    height: 180px;
+    animation: vertical-rotate 5s linear infinite; /* Бесконечное вращение */
+  }
+  
+  /* Анимация вращения по оси Y */
+  @keyframes vertical-rotate {
+    0% {
+      transform: rotateY(0deg);
+    }
+    100% {
+      transform: rotateY(360deg);
+    }
+  }
+  
+  /* Стили для текста, расположенного по кругу */
+  .text-container {
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 36px;
+    font-family: "Roboto", sans-serif;
+    text-shadow: #f0ad11 0px -1px;
+    margin-top: 20px;
+  }
+
+  .text-container h1 {
+    margin: 0;
+  }
